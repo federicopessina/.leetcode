@@ -11,7 +11,8 @@
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {
-        std::unordered_map<int, int> seen; // note: b/c unordered vecotr
+        // note: b/c unordered vector we cannot use binary search
+        std::unordered_map<int, int> seen;
 
         for (int i = 0; i < nums.size(); ++i) {
             int complement = target - nums[i];
